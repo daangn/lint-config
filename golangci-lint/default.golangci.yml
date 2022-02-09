@@ -1,0 +1,189 @@
+author:
+  - "lani@daangn.com"
+  - "carter@daangn.com"
+
+run:
+  timeout: 5m
+  issues-exit-code: 2
+  tests: true
+  build-tags: []
+  skip-dirs: []
+  skip-dirs-use-default: false
+  skip-files: []
+  allow-parallel-runners: true
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+  uniq-by-line: true
+  sort-results: true
+linters-settings:
+  godot:
+    scope: all
+  gofmt:
+    simplify: false
+  revive:
+    severity: warning
+    rules:
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#atomic>
+      - name: atomic
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#blank-imports>
+      - name: blank-imports
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#bool-literal-in-expr>
+      - name: bool-literal-in-expr
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#call-to-gc>
+      - name: call-to-gc
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#constant-logical-expr>
+      - name: constant-logical-expr
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#context-as-argument>
+      - name: context-as-argument
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#context-keys-type>
+      - name: context-keys-type
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#defer>
+      - name: defer
+        disabled: false
+        arguments:
+          - ["call-chain", "loop", "method-call", "recover", "return"]
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#dot-imports>
+      - name: dot-imports
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#duplicated-imports>
+      - name: duplicated-imports
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#early-return>
+      - name: early-return
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#empty-block>
+      - name: empty-block
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#error-naming>
+      - name: error-naming
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#error-return>
+      - name: error-return
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#error-strings>
+      - name: error-strings
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#errorf>
+      - name: errorf
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#exported>
+      - name: exported
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#get-return>
+      - name: get-return
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#identical-branches>
+      - name: identical-branches
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#increment-decrement>
+      - name: increment-decrement
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#indent-error-flow>
+      - name: indent-error-flow
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#package-comments>
+      - name: package-comments
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#range>
+      - name: range
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#range-val-in-closure>
+      - name: range-val-in-closure
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#range-val-address>
+      - name: range-val-address
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#receiver-naming>
+      - name: receiver-naming
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#redefines-builtin-id>
+      - name: redefines-builtin-id
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#string-of-int>
+      - name: string-of-int
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#time-naming>
+      - name: time-naming
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#var-declaration>
+      - name: var-declaration
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#var-naming>
+      - name: var-naming
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unexported-naming>
+      - name: unexported-naming
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unexported-return>
+      - name: unexported-return
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unnecessary-stmt>
+      - name: unnecessary-stmt
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unreachable-code>
+      - name: unreachable-code
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unused-parameter>
+      - name: unused-parameter
+        disabled: false
+      # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#useless-break>
+      - name: useless-break
+        disabled: false
+  staticcheck:
+    checks:
+      - all
+      - "-SA9004" # <https://staticcheck.io/docs/checks#SA9004>
+  gocritic:
+    disabled-checks:
+      - exitAfterDefer # panic is required when examines config
+linters:
+  enable:
+    - errcheck # checks unchecked errors
+    - gosimple # simplify code
+    - govet # examines Go source code and reports suspicious constructs
+    - ineffassign # detect unused assign
+    - staticcheck # cover Go vet edge cases
+    - typecheck # type-checks Go code
+    - unused # checks Go code for unused constants, variables, functions and types
+    - bidichk # checks for dangerous unicode character sequences
+    - bodyclose # checks whether HTTP response body is closed successfully
+    - contextcheck # check the function whether use a non-inherited context
+    - dupl # code clone detection
+    - durationcheck # check for two durations multiplied together
+    - errname # checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
+    - errorlint # find code that will cause problems with the error wrapping scheme
+    - exportloopref # checks for pointers to enclosing loop variables
+    - goconst # finds repeated strings that could be replaced by a constant
+    - gocritic # provides diagnostics that check for bugs, performance and style issues
+    - godot # check if comments end in a period
+    - gofmt # checks whether code was gofmt-ed
+    - goimports # fix imports, formats your code in the same style as gofmt
+    - ifshort # checks that your code uses short syntax for if-statements whenever possible
+    - misspell # finds commonly misspelled English words in comments
+    - noctx # finds sending http request without context.Context
+    - predeclared # find code that shadows one of Go's predeclared identifiers
+    - revive # replacement of golint
+    - rowserrcheck # checks whether Err of rows is checked successfully
+    - sqlclosecheck # checks that sql.Rows and sql.Stmt are closed.
+    - unconvert # remove unnecessary type conversions
+    - wastedassign # finds wasted assignment statements.
+    - whitespace # tool for detection of leading and trailing whitespace
+    - wrapcheck # check that errors from external packages are wrapped during return to help identify the error source.
+
+  disable:
+    - deadcode # enabled-default. but duplicated & deprecated someday
+    - structcheck # enabled-default. but duplicated & deprecated someday
+    - varcheck # enabled-default. but duplicated & deprecated someday
+issues:
+  exclude: []
+severity:
+  default-severity: warning
